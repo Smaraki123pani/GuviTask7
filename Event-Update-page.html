@@ -1,0 +1,150 @@
+<!-- Responsive design for event update page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Update Page</title>
+    <style>
+     h1{
+        font-family: Lucida Handwriting;
+      }
+      body {
+        text-align: center;
+        margin-top: 47px;
+        margin-left: 114px;
+
+      }
+      #container,
+      #form,
+      #image {
+        display: inline-block;
+        border: 2px solid black;
+      }
+      #container {
+        width: 1100px;
+        height: 600px;
+        padding: 20px;
+      }
+      #form {
+        width: 1000px;
+        height: 400px;
+        font-family: "Times New Roman", Times, serif;
+        font-size: medium;
+      }
+      .items {
+        /* border: 1px solid black; */
+        /* display: inline-block; */
+        float: right;
+        margin-top: -2px;
+        margin-right: -105px;
+        padding: 10px;
+      }
+      #image {
+        width: 239px;
+        height: 219px;
+        float: left;
+        margin-top: 5px;
+        margin-left: 105px;
+      }
+
+      .in1 {
+        width: 243px;
+        margin-right: 96px;
+      }
+      .in2 {
+        width: 247px;
+        margin-right: 92px;
+      }
+      .in3 {
+        width: 251px;
+        margin-right: 135px;
+      }
+      .in4 {
+        width: 72px;
+        margin-right: 373px;
+      }
+      .in5 {
+        width: 253px;
+        margin-right: 225px;
+      }
+
+      button {
+        border: 1px solid black;
+        color: black;
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 10px;
+        display: inline-block;
+        box-shadow: 2px 7px 6px;
+        transition: color 0.3s, background-color 0.3s;
+        font-family: Lucida Handwriting;
+      }
+      
+      button:hover {
+        color: white;
+        background-color: rgb(13, 68, 187);
+        cursor: pointer;
+      }
+      .circle {
+        width: 150px;
+        height: 168px;
+        border: 1px solid black;
+        border-radius: 50%;
+        display: inline-block;
+        margin-top: 25px;
+      }
+      .span-img {
+        display: inline-block;
+        /* border: 1p solid black; */
+        margin-top: 68px;
+        margin-right: 4px;
+        font-family: Lucida Handwriting;
+      }
+        @media screen and (min-width: 768px) {
+            #container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #form {
+                margin-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="form">
+            <h1>Event 1</h1>
+            <h2 style="height: -428px;">Number of Available Seats: 23</h2>
+            <form>
+              <div id="image">
+                <img src="" class="img-thumbnail" /><span class="circle">
+                  <span class="span-img">Image</span>
+                </span>
+              </div>
+                <div class="items">
+                    <label for="Name">Name:</label>
+                    <input type="text" name="Name" id="Name" class="in1"/><br /><br>
+
+                    <label for="Email">Email:</label>
+                    <input type="email" name="Email" id="Email" class="in2" /><br /><br>
+
+                    <label for="number">Phone No.:</label>
+                    <input type="number" name="number" id="number" class="in3"/><br /><br>
+
+                    <label for="seats">Number of Seats:</label>
+                    <input type="number" name="seats" id="seats" value="2" class="in4"/><br /><br>
+
+                    <label for="attendee2">Name of Attendee 2:</label>
+                    <input type="text" name="attendee2" id="attendee2" class="in5"/><br /><br>
+
+                    <button type="submit">Submit</button>
+                    <button type="reset">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

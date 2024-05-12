@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <style>
+      .container {
+        margin: 2rem auto 2rem auto;
+        padding: 1rem;
+        border: solid whitesmoke 1px;
+        border-collapse: collapse;
+      }
+      #first,
+      #last,
+      #email,
+      #rating {
+        margin: 1rem;
+      }
+      label {
+        font-weight: bold;
+      }
+      p {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: small;
+        font-weight: lighter;
+      }
+      #textbox {
+        width: max-content;
+        height: max-content;
+      }
+      div.my-col {
+        width: 80px;
+      }
+      .row-dark {
+        background-color: whitesmoke;
+      }
+    </style>
+    <div class="container">
+      <div class="container-fluid col">
+        <div class="row">
+          <label for="name">Name: </label>
+          <div>
+            <input type="text" id="first" placeholder="First-name" />
+            <input type="text" id="last" placeholder="Last-name" />
+          </div>
+        </div>
+        <div class="row">
+          <label for="name">Email : </label>
+          <input type="email" id="email" placeholder="abc@xyz.com" />
+        </div>
+      </div>
+      <div id="rating">
+        <label for="rating">Rate your experience: </label>
+        <div>⭐⭐⭐⭐⭐</div>
+        <p>Overall, how would you rate your experience with us?</p>
+      </div>
+      <div class="container-fluid">
+        <h6 style="font-weight: bold">How satisfied are you with us?</h6>
+        <section id="section1">
+          <div class="row table table-bordered">
+            <div class="col"></div>
+            <div class="col">Very Unsatisfied</div>
+            <div class="col">Unsatisfied</div>
+            <div class="col">Neutral</div>
+            <div class="col">Satisfied</div>
+            <div class="col">Very Satisfied</div>
+          </div>
+          <div class="row table table-stripped row-dark">
+            <div class="col">Purchase</div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+          </div>
+          <div class="row table table-stripped">
+            <div class="col">Service</div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+          </div>
+          <div class="row table table-stripped row-dark">
+            <div class="col">Company Overall</div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+          </div>
+        </section>
+        <h6 style="font-weight: bold">How likely are you to?</h6>
+        <section id="section2">
+          <div class="row table table-bordered">
+            <div class="col my-col"></div>
+            <div class="col">Very Unlikely</div>
+            <div class="col">Unlikely</div>
+            <div class="col">Neutral</div>
+            <div class="col">Likely</div>
+            <div class="col">Very Likely</div>
+          </div>
+          <div class="row table table-stripped row-dark">
+            <div class="col my-col">Buy from us again</div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+          </div>
+          <div class="row table table-stripped">
+            <div class="col">Recommended our product to others</div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+          </div>
+          <div class="row table table-stripped row-dark">
+            <div class="col">Recommended our company to others</div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+            <div class="col"><input type="radio" /></div>
+          </div>
+        </section>
+      </div>
+      <div class="container-fluid media" id="comment-section">
+        <h6 class="align-self-start mr-3" h6 style="font-weight: bold">
+          Additional comments or suggestions
+        </h6>
+        <textarea class="media-body" id="textbox"></textarea>
+      </div>
+      <button type="submit" id="btn">Submit</button>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
